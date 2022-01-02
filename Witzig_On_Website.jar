@@ -1,3 +1,20 @@
+public class Witzig_On_Website
+{    
+    
     static private final long WITZIG_EMOJI = 609012744578007071L;
+    static private final long ZITAT-BOT-SPAM_KANAL = 681956716077777070;
     static private final long WIT_EMOJI = 577887998310613032;
     static private final long ZIG_EMOJI = 577888095735906305;
+    
+    private bool = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI
+     private void reactionAdded(ReactionAddEvent event) {
+        if (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI
+                && event.getChannel().getId() == ZITAT-BOT-SPAM_KANAL) {
+            
+
+                        });
+                    });
+                }
+            });
+            
+}
