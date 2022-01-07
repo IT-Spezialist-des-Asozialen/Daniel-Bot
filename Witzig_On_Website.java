@@ -1,4 +1,9 @@
 import java.util.*;
+import org.javacord.api.DiscordApi;
+import org.javacord.api.DiscordApiBuilder;
+import org.javacord.api.entity.message.embed;
+import org.javacord.api.event.message.reaction.ReactionAddEvent;
+import org.javacord.api.event.message.reaction.ReactionRemoveEvent;
 
 public class Witzig_On_Website
 {    
