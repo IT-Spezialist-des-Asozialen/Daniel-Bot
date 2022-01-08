@@ -33,8 +33,8 @@ public class Witzig_On_Website
     private void 
     {
         List Embed = new ArrayList();
-        List Embed = event.getEmbeds​()
-        if Embed.size() == 1
+        List Embed = event.getEmbeds​();
+        if (Embed.size() == 1)
         {
             Embedj=true;
         }
@@ -48,7 +48,7 @@ public class Witzig_On_Website
         WITZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI;
         WIT_ZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) ==WIT_EMOJI;
         NICHT_WITZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == NICHT_WITZIG_EMOJI;
-        if WITZIG ==true || WIT_ZIG==true;
+        if (WITZIG ==true || WIT_ZIG==true)
         {
             togeher = true;
         }
@@ -56,7 +56,7 @@ public class Witzig_On_Website
         {
             together = false;
         }
-        if WITZIG_WEG ==true || WIT_ZIG_WEG==true;
+        if (WITZIG_WEG ==true || WIT_ZIG_WEG==true)
         {
             togeher_WEG = true;
         }
@@ -64,17 +64,17 @@ public class Witzig_On_Website
         {
             together_WEG = false;
         }
-        if event.getChannel().getId() == ZITAT_BOT_SPAM_KANAL) &&event.getAuthor().getID()==Superheldenwelt && Embedj=true
+        if (event.getChannel().getId() == ZITAT_BOT_SPAM_KANAL) &&event.getAuthor().getID()==Superheldenwelt && Embedj=true)
         {
             URLalt = ListEmbed[0];
             URLgeteilt = new ArrayList();
             URLgeteilt[] = URLalt.split("/");
-            URLneu = "https://asozial.org/api/zitate/" + URLgeteilt[4] + "/"
-            if together==true || NICHT_WITZIG_WEG==true
+            URLneu = "https://asozial.org/api/zitate/" + URLgeteilt[4] + "/";
+            if (together==true || NICHT_WITZIG_WEG==true)
             {
-                curl 'https://asozial.org/api/zitate/383-643/' -H 'Accept: application/json' --data-raw '{"vote":"1"}';
+                curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"1"}';
             }
-            if NICHT_WITZIG==true || together_WEG==true
+            if (NICHT_WITZIG==true || together_WEG==true)
             {
                 curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"-1"}';
             }
