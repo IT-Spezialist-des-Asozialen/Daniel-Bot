@@ -26,12 +26,15 @@ public class Witzig_On_Website
     
     private bool WITZIG_WEG;
     private bool WIT_ZIG_WEG;
+    
+    private string URLalt;
+    private string URLneu;
    
     private void 
     {
         List Embed = new ArrayList();
         List Embed = event.getEmbeds​()
-        if Embed.size() != 0
+        if Embed.size() == 1
         {
             Embedj=true;
         }
@@ -63,14 +66,17 @@ public class Witzig_On_Website
         }
         if event.getChannel().getId() == ZITAT_BOT_SPAM_KANAL) &&event.getAuthor().getID()==Superheldenwelt && Embedj=true
         {
-
+            URLalt = ListEmbed[0];
+            URLgeteilt = new ArrayList();
+            URLgeteilt[] = URLalt.split("/");
+            URLneu = "https://asozial.org/api/zitate/" + URLgeteilt[4] + "/"
             if together==true || NICHT_WITZIG_WEG==true
             {
                 curl 'https://asozial.org/api/zitate/383-643/' -H 'Accept: application/json' --data-raw '{"vote":"1"}';
             }
             if NICHT_WITZIG==true || together_WEG==true
             {
-                curl 'https://asozial.org/api/zitate/383-643/' -H 'Accept: application/json' --data-raw '{"vote":"-1"}';
+                curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"-1"}';
             }
         }
     }     
