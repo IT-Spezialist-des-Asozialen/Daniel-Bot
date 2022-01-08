@@ -30,54 +30,52 @@ public class Witzig_On_Website
     private string URLalt;
     private string URLneu;
    
-    private void 
+
+    List Embed = new ArrayList();
+    List Embed = event.getEmbeds​();
+    if (Embed.size() == 1)
     {
-        List Embed = new ArrayList();
-        List Embed = event.getEmbeds​();
-        if (Embed.size() == 1)
+        Embedj=true;
+    }
+    else
+    {
+        Embedj=false;
+    }
+    WITZIG = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI;
+    WIT_ZIG = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WIT_EMOJI;
+    NICHT_WITZIG = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == NICHT_WITZIG_EMOJI;
+    WITZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI;
+    WIT_ZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) ==WIT_EMOJI;
+    NICHT_WITZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == NICHT_WITZIG_EMOJI;
+    if (WITZIG ==true || WIT_ZIG==true)
+    {
+        togeher = true;
+    }
+    else
+    {
+        together = false;
+    }
+    if (WITZIG_WEG ==true || WIT_ZIG_WEG==true)
+    {
+        togeher_WEG = true;
+    }
+    else
+    {
+        together_WEG = false;
+    }
+    if (event.getChannel().getId() == ZITAT_BOT_SPAM_KANAL) &&event.getAuthor().getID()==Superheldenwelt && Embedj=true)
+    {
+        URLalt = ListEmbed[0];
+        URLgeteilt = new ArrayList();
+        URLgeteilt[] = URLalt.split("/");
+        URLneu = "https://asozial.org/api/zitate/" + URLgeteilt[4] + "/";
+        if (together==true || NICHT_WITZIG_WEG==true)
         {
-            Embedj=true;
+            curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"1"}';
         }
-        else
+        if (NICHT_WITZIG==true || together_WEG==true)
         {
-            Embedj=false;
+            curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"-1"}';
         }
-        WITZIG = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI;
-        WIT_ZIG = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WIT_EMOJI;
-        NICHT_WITZIG = (event.getEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == NICHT_WITZIG_EMOJI;
-        WITZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == WITZIG_EMOJI;
-        WIT_ZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) ==WIT_EMOJI;
-        NICHT_WITZIG_WEG =(event.RemoveEmoji().asCustomEmoji().map(DiscordEntity::getId).orElse(0L) == NICHT_WITZIG_EMOJI;
-        if (WITZIG ==true || WIT_ZIG==true)
-        {
-            togeher = true;
-        }
-        else
-        {
-            together = false;
-        }
-        if (WITZIG_WEG ==true || WIT_ZIG_WEG==true)
-        {
-            togeher_WEG = true;
-        }
-        else
-        {
-            together_WEG = false;
-        }
-        if (event.getChannel().getId() == ZITAT_BOT_SPAM_KANAL) &&event.getAuthor().getID()==Superheldenwelt && Embedj=true)
-        {
-            URLalt = ListEmbed[0];
-            URLgeteilt = new ArrayList();
-            URLgeteilt[] = URLalt.split("/");
-            URLneu = "https://asozial.org/api/zitate/" + URLgeteilt[4] + "/";
-            if (together==true || NICHT_WITZIG_WEG==true)
-            {
-                curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"1"}';
-            }
-            if (NICHT_WITZIG==true || together_WEG==true)
-            {
-                curl URLneu -H 'Accept: application/json' --data-raw '{"vote":"-1"}';
-            }
-        }
-    }     
+    }   
 }
